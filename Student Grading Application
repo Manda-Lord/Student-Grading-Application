@@ -1,6 +1,5 @@
 using System;
-
-// initialize variables - graded assignments 
+ 
 int examAssignments = 5;
 
 int[] sophiaScores  = new int[7] { 90, 86, 87, 98, 100, 94, 90 };
@@ -12,14 +11,16 @@ int[] chrisScores   = new int[8] { 84, 86, 88, 90, 92, 94, 96, 98 };
 int[] ericScores    = new int[8] { 80, 90, 100, 80, 90, 100, 80, 90 };
 int[] gregorScores  = new int[7] { 91, 91, 91, 91, 91, 91, 91 };
 
-// student names
+// -
+
 string[] studentNames = { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
 
 int[] studentScores = new int[10];
 
 string currentStudentLetterGrade = "";
 
-// Write report header to the console
+// -
+
 Console.WriteLine("Student\t\tGrade\n");
 
 foreach (string name in studentNames)
@@ -62,8 +63,10 @@ foreach (string name in studentNames)
     //intialise/reset a counter for the number of assignments
     int gradedAssignments = 0;
 
-    // The foreach loop below is the calculation loop that will add each score in the array one by one
-    foreach (int score in studentScores)
+    // -
+
+    // Calculation loop - adds each score in the array one by one foreach (int score in studentScores)
+
     {
         //increment the assignment counter
         gradedAssignments += 1;
@@ -78,6 +81,8 @@ foreach (string name in studentNames)
             sumAssignmentScores += score / 10;
         }
     }
+
+    // -
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / (examAssignments);
 
