@@ -67,21 +67,19 @@ foreach (string name in studentNames)
 
     // -
 
-    // Calculation loop - adds each score in the array one by one foreach (int score in studentScores)
+    // Master calculation block
+    // Adds each score in the array one by one foreach (int score in studentScores)
 
+    foreach (int mark in studentMarks)
     {
-        //increment the assignment counter
         gradedAssignments += 1;
 
         if (gradedAssignments <= examAssignments)
-            // add the exam score to the sum
-            sumAssignmentScores += score;
+            // Add the exam score to sum
+            sumAssignmentMarks += mark;
 
-        else
-        {
-            //add the extra credit points to the sum - bonus points equal to 10% of an exam score
-            sumAssignmentScores += score / 10;
-        }
+        else // Any assignments beyond the 5 are extra; 10% per extra assignment
+            sumAssignmentMarks += mark / 10; // Extra credits points
     }
 
     // -
